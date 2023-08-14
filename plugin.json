@@ -1,0 +1,89 @@
+{
+    "name" : "vlabeler-oto-adjuster",
+    "version" : 1,
+    "type" : "macro",
+    "displayedName" : "Oto Adjuster for vLabeler",
+    "author" : "UtaUtaUtau",
+    "description" : "Adjust oto values without moving preutterance. Inspired by the original Oto Adjuster by Crystalex93.",
+    "website" : "https://utautautau.neocities.org/",
+    "supportedLabelFileExtension" : "ini",
+    "parameters" : {
+        "list" : [
+        {
+            "type" : "entrySelector",
+            "name" : "filters",
+            "label" : "Entry Filters",
+            "description" : "Add filters to select entries to edit. Leave blank to edit all entries.",
+            "defaultValue" : {
+                "filters" : []
+            }
+        },
+        {
+            "type" : "float",
+            "name" : "offset",
+            "label" : "Offset Move",
+            "description" : "Offsets the whole oto by the amount in milliseconds.",
+            "defaultValue" : 0.000
+        },
+        {
+            "type" : "boolean",
+            "name" : "doOffset",
+            "label" : "Apply Offset Move",
+            "defaultValue" : false
+        },
+        {
+            "type" : "float",
+            "name" : "consonant",
+            "label" : "Consonant/Fixed",
+            "description" : "Change the consonant/fixed value to this if applied.",
+            "defaultValue" : 450.000
+        },
+        {
+            "type" : "boolean",
+            "name" : "doConsonant",
+            "label" : "Apply Consonant/Fixed",
+            "defaultValue" : true
+        },
+        {
+            "type" : "float",
+            "name" : "cutoff",
+            "label" : "Cutoff/Right Blank",
+            "description" : "Change the cutoff/right blank value to this if applied.",
+            "defaultValue" : -700.000
+        },
+        {
+            "type" : "boolean",
+            "name" : "doCutoff",
+            "label" : "Apply Cutoff/Right Blank",
+            "defaultValue" : true
+        },
+        {
+            "type" : "float",
+            "name" : "preutterance",
+            "label" : "Preutterance",
+            "description" : "Change the preutterance value to this if applied.",
+            "defaultValue" : 300.000
+        },
+        {
+            "type" : "boolean",
+            "name" : "doPreutterance",
+            "label" : "Apply Preutterance",
+            "defaultValue" : true
+        },
+        {
+            "type" : "float",
+            "name" : "overlap",
+            "label" : "Overlap",
+            "description" : "Change the overlap value to this if applied.",
+            "defaultValue" : 100.000
+        },
+        {
+            "type" : "boolean",
+            "name" : "doOverlap",
+            "label" : "Apply Overlap",
+            "defaultValue" : true
+        }
+        ]
+    },
+    "scriptFiles" : ["oto-adjuster.js"]
+}
